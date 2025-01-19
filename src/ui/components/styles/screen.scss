@@ -1,0 +1,50 @@
+@import '/styles/vars';
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-slot-machine {
+  font-size: 1.8em;
+  line-height: 1em;
+
+  background-image: unset !important;
+  background-color: unset !important;
+  border: 0 !important;
+
+  .odometer-inside {
+    background-image: unset !important;
+  }
+}
+
+.screen {
+  border-left: solid 1px $border-color;
+  border-right: solid 1px $border-color;
+  border-top: solid 1px $border-color;
+
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+
+  overflow: hidden;
+
+  .counter {
+    padding: 4px 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #041238a8;
+
+    width: auto;
+    min-width: 28%;
+    max-width: 48%;
+
+    .label {
+      z-index: 1;
+      padding: 4px;
+      color: white;
+      text-align: center;
+      font-family: 'Black Ops One', sans-serif;
+      font-size: 1.5em !important;
+      text-transform: uppercase;
+    }
+  }
+}

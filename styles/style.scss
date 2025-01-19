@@ -1,0 +1,214 @@
+@import '/styles/vars';
+@import '/styles/fonts';
+@import '/styles/animations';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: #000000de;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+#app {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 640px; /* TODO configure for different screen sizes*/
+}
+
+@media (max-width: 1128px) {
+  #app {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 938px) {
+  #app {
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 922px) {
+  #app {
+    transform: scale(0.8);
+  }
+}
+
+/** Mobile Landscape */
+@media (max-width: 768px) {
+  #app {
+    transform: scale(0.65);
+
+    .odometer .odometer-theme-slot-machine {
+      font-size: 1.2em;
+    }
+  }
+}
+
+/** Mobile */
+@media (orientation: landscape) and (max-width: 640px) {
+  #app {
+    transform: scale(0.35);
+
+    .odometer .odometer-theme-slot-machine {
+      font-size: 1.4em;
+    }
+  }
+}
+
+#slot {
+  border: solid 1px $border-color;
+  box-sizing: content-box;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+
+.v-align {
+  vertical-align: middle !important;
+}
+
+div.modal-footer,
+div.modal-body,
+div.modal-header {
+  background-color: #000000de;
+  color: white;
+}
+
+table td {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.lil-gui.autoPlace {
+  right: 0 !important;
+}
+
+#controls {
+  position: relative;
+
+  .double-controls {
+    position: absolute;
+    top: -64px;
+    width: 100%;
+  }
+
+  .btn-container {
+    gap: 4px;
+
+    button,
+    .total-bet {
+      animation: glow 3s infinite ease-in-out alternate;
+      background-size: 200% 200%;
+
+      &[disabled],
+      &.disabled {
+        opacity: 0.5 !important;
+      }
+
+      &:hover {
+        animation: none;
+        background-position: right center;
+      }
+    }
+  }
+}
+
+button#spin {
+  background-image: linear-gradient(356deg, rgba(95, 218, 13, 0.67) 0%, #5666c330 50%);
+  border: 2px solid $border-color;
+  padding: 4px 8px;
+  border-radius: $border-radius;
+  color: white;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1.5em !important;
+  text-transform: uppercase;
+  margin: 4px 0;
+  flex-grow: 1;
+}
+
+button#double {
+  background-image: linear-gradient(356deg, rgba(218, 160, 13, 0.67) 0%, #5666c330 50%);
+  border: 2px solid $border-color;
+  padding: 4px 8px;
+  border-radius: $border-radius;
+  color: white;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1.5em !important;
+  text-transform: uppercase;
+  margin: 4px 0;
+}
+
+button#take-win {
+  background-image: linear-gradient(356deg, rgba(105, 5, 32, 0.67) 0%, #5666c330 50%);
+  border: 2px solid $border-color;
+  padding: 4px 8px;
+  border-radius: $border-radius;
+  color: white;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1.5em !important;
+  text-transform: uppercase;
+  margin: 4px 0;
+}
+
+button#auto-spin {
+  background-image: linear-gradient(356deg, rgba(218, 13, 13, 0.67) 0%, #5666c330 50%);
+  border: 2px solid $border-color;
+  padding: 4px 8px;
+  border-radius: $border-radius;
+  color: white;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1.5em !important;
+  text-transform: uppercase;
+  margin: 4px 0;
+}
+
+button.btn-double {
+  border: 2px solid $border-color;
+  padding: 4px 8px;
+  border-radius: $border-radius;
+  color: white;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1.5em !important;
+  text-transform: uppercase;
+  margin: 4px 0;
+  width: 30%;
+}
+
+button#bonus-red {
+  background-image: linear-gradient(356deg, rgba(218, 13, 13, 0.67) 0%, #5666c330 50%);
+}
+
+button#bonus-blue {
+  background-image: linear-gradient(356deg, rgba(13, 13, 218, 0.67) 0%, #5666c330 50%);
+}
+
+div.modal-header,
+div.modal-body,
+div.modal-footer {
+  background-color: rgba(0, 0, 0, 0.8705882353);
+  color: white;
+  background-image: linear-gradient(45deg, #03132096, transparent);
+  font-family: 'Black Ops One', sans-serif;
+}

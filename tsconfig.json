@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "moduleResolution": "Node",
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "solid-js",
+    "baseUrl": ".",
+    "paths": {
+      "/src/*": ["src/*"],
+      "/tests/*": ["tests/*"],
+      "/images/*": ["images/*"],
+      "/sounds/*": ["sounds/*"]
+    }
+  },
+  "include": ["src", "tests", "src/**/*.d.ts"]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "slot-game-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode=development",
+    "build": "tsc && vite --mode=github build",
+    "preview": "vite preview --open index.html",
+    "dev:crazy": "vite --mode=crazy",
+    "build:itch": "tsc && vite --mode=itch build",
+    "build:crazy": "tsc && vite --mode=crazy build",
+    "prepreview:crazy": "npm run build:crazy",
+    "preview:crazy": "vite preview --open sdk.html ",
+    "test": "vitest --mode=test --no-watch",
+    "format": "npx lint-staged",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/gsap": "^3.0.0",
+    "@types/ms": "^0.7.31",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.0",
+    "prettier": "3.0.2",
+    "sass": "^1.66.1",
+    "solid-devtools": "^0.27.7",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vite-plugin-bootstrap": "^5.2.3",
+    "vite-plugin-glsl": "^1.1.2",
+    "vite-plugin-solid": "^2.7.0",
+    "vitest": "^0.34.2"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "@pixi/assets": "^7.2.4",
+    "bootstrap": "^5.3.1",
+    "gsap": "^3.12.2",
+    "lil-gui": "^0.18.2",
+    "ms": "^2.1.3",
+    "odometer": "^0.4.8",
+    "pixi-filters": "^5.2.1",
+    "pixi.js": "^7.2.4",
+    "solid-bootstrap": "^1.0.14",
+    "solid-icons": "^1.0.11",
+    "solid-js": "^1.7.11",
+    "tiny-emitter": "^2.1.0"
+  },
+  "engines": {
+    "node": "18.17.0",
+    "npm": ">=9.0.0"
+  },
+  "engineStrict": true
+}
